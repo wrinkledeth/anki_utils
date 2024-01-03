@@ -1,6 +1,7 @@
 # anki_utils
 
 ## Deck Field Format
+```bash
 0 Sequence Marker
 1 Target
 2 Simplified
@@ -12,6 +13,7 @@
 8 Notes
 9 Proper_nounts
 10 English_Definition
+```
 
 ## Traditional to simplified (OpenCC)
 
