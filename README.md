@@ -1,5 +1,11 @@
 # anki_utils
 
+Takes a subs2srs deck that only has chinese subtitles and audio and:
+- converts any traidtional characters to simplified
+- generates pinyin 
+- uses LLM to translate to english 
+- updates each note in the deck with the above changes.
+
 ## Deck Field Format
 ```bash
 0 Sequence Marker
