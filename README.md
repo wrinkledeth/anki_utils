@@ -18,6 +18,7 @@
 ## Traditional to simplified (OpenCC)
 
 [opencc github](https://github.com/BYVoid/OpenCC)
+
 [opencc homebrew](https://formulae.brew.sh/formula/opencc)
 
 ```bash
