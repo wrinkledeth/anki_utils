@@ -47,6 +47,8 @@ pinyin_string = " ".join(
 
 ## Gpt4all local translations
 
+List of models with python bindings available: https://github.com/nomic-ai/gpt4all/blob/main/gpt4all-chat/metadata/models2.json
+
 ```bash
 ➜  GPT4All pwd                
 /Users/zen/Library/Application Support/nomic.ai/GPT4All
