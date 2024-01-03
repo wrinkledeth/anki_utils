@@ -20,11 +20,9 @@
 [opencc github](https://github.com/BYVoid/OpenCC)
 [opencc homebrew](https://formulae.brew.sh/formula/opencc)
 
-Install
 ```bash
 brew install opencc
 ```
-Python
 ```python
 # instantiate OpenCC traditional to simplified converter
 converter = opencc.OpenCC("t2s")
