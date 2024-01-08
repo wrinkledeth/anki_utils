@@ -87,10 +87,40 @@ def update_english():
     print(f"Added english to {count} notes (which had no english).")
 
 
+def update_target_english_definition():
+    """Add target english definition to notes"""
+    count = 0
+    for note_id in notes:
+        note = col.get_note(note_id)  # Get the note
+        # 11 am-unknowns
+        # 12 am-unknowns-count
+        am_target = note.fields[11]  # am-unknowns
+        am_target_count = note.fields[12]  # am-unknowns-count
+        if am_target_count == "1":  # if there are no unknowns
+            count += 1
+            english = model.generate(
+                f"Translate the Chinese word '{am_target}' to English.",
+                max_tokens=60,
+                temp=0.8,
+            )
+            # remove "Answer:" prefix from english if it is there:
+            if ":" in english:
+                english = english.split(":")[1].strip()
+            print("-----------------------------------")
+            print(f"Original: {am_target}")
+            print(f"English: {english}")
+            note.fields[10] = english  # update english definition field
+            col.update_note(note)  #! update note
+        # if count == 10:
+        #     break
+    print(f"Added target english definitions to {count} notes (which had no english).")
+
+
 def main():
-    trad_to_simp()
-    update_pinyin()
-    update_english()
+    # trad_to_simp()
+    # update_pinyin()
+    # update_english()
+    update_target_english_definition()
     col.close()
 
 

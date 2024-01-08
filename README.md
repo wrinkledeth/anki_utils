@@ -19,6 +19,11 @@ Takes a subs2srs deck that only has chinese subtitles and audio and:
 8 Notes
 9 Proper_nounts
 10 English_Definition
+11 am-unknowns
+12 am-unknowns-count
+13 am-highlighted
+14 am-difficulty 
+
 ```
 
 ## Traditional to simplified (OpenCC)
@@ -94,3 +99,5 @@ English: "It seems like all gods, except for the god of death, are standing on m
 Added english to 13231 notes (which had no english).
 ```
 
+## Todo:
+- [ ] whisper api to generate cards from audio / video only. 
