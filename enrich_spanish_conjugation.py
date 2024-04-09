@@ -42,11 +42,11 @@ def call_chat(translation_input):
     print("-----------------------------------")
     print(f"Original: {translation_input}")
     # Generate the English definition
-    enriched_prompt = f"Spanish Sentence: {translation_input}'\nEnglish Translation:."
+    enriched_prompt = f"Spanish Sentence: {translation_input}'\nEnglish Translation:"
     out = model.generate(
         enriched_prompt,
         max_tokens=60,
-        temp=1,
+        temp=0,
     )
     english = out.split("\n")[0]
     print(f"English: {english}")
